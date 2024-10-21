@@ -1,0 +1,82 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #E5E7EB;
+    height: 100vh; /* Altura total da viewport */
+    width: 100%;
+    margin: 0;
+    display: flex; /* Flexbox para o corpo */
+}
+
+.userTool {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 20px 0 0 0; /* Adiciona espaço acima da lista */
+}
+
+.userTool li {
+    text-align: left; /* Alinha o texto à esquerda */
+    margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+    font-size: 18px;
+}
+
+.userTool button {
+    background: none; /* Remove a cor de fundo */
+    border: none; /* Remove a borda */
+    color: inherit; /* Herda a cor do texto */
+    padding: 0; /* Remove o padding */
+    font: inherit; /* Herda a fonte */
+    cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.userTool button:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+.sidenav {
+    height: 100%;
+    width: 40%; /* Largura da sidenav */
+    background-color: #FFF;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o h2 horizontalmente */
+    padding: 20px; /* Centraliza conteúdo verticalmente */
+}
+
+.card {
+    width: 60%;
+    height: 150px; /* Altura fixa */
+    margin: 10px; /* Margem para espaçamento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-container {
+    display: flex; /* Flexbox para manter os cards na mesma linha */
+    justify-content: space-around; /* Espaçamento igual entre os cards */
+    flex-wrap: nowrap; /* Não permitir que os cards quebrem para a linha de baixo */
+    width: 80vw;
+    margin-top: 2vh;
+}
+
+.main-content {
+    height: 100vh; /* Altura total da viewport */
+}
+
+.aba h2 {
+    margin-top: 22px;
+    margin-left: 2%;
+}
+
+/* .canvas-container {
+    width: 60%; 
+    height: 400px; 
+    margin-top: 20px; /
+}
+
+.table-container {
+    width: 100%; 
+    overflow-x: auto; 
+} */
