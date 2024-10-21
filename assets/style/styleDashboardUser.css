@@ -1,10 +1,22 @@
 body {
     font-family: "Lato", sans-serif;
     background-color: #E5E7EB;
-    height: 100vh; /* Altura total da viewport */
+    height: 100%; /* Altura total da viewport */
     width: 100%;
     margin: 0;
     display: flex; /* Flexbox para o corpo */
+}
+
+.abaDashboard, .abaPerfil, .abaFormulario {
+    display: none; /* Oculta todas as abas inicialmente */
+}
+
+.active {
+    display: block; /* Exibe a aba ativa */
+}
+
+.user h2{
+    font-size: 2vw;
 }
 
 .userTool {
@@ -16,7 +28,7 @@ body {
 .userTool li {
     text-align: left; /* Alinha o texto à esquerda */
     margin-bottom: 10px; /* Espaçamento entre os itens da lista */
-    font-size: 18px;
+    font-size: 1vw;
 }
 
 .userTool button {
@@ -44,7 +56,8 @@ body {
 }
 
 .card {
-    width: 60%;
+    width: 90%;
+    max-width: 300px;
     height: 150px; /* Altura fixa */
     margin: 10px; /* Margem para espaçamento */
     display: flex;
@@ -62,21 +75,24 @@ body {
 }
 
 .main-content {
-    height: 100vh; /* Altura total da viewport */
+    display: flex;
+    height: auto;
+    min-height: 100vh; /* Altura total da viewport */
 }
 
-.aba h2 {
+.abaDashboard h2 {
     margin-top: 22px;
     margin-left: 2%;
+    font-size: 2vw;
 }
 
-/* .canvas-container {
-    width: 60%; 
-    height: 400px; 
-    margin-top: 20px; /
+#chartContainer {
+    background-color: white;
+    width: 100%;
+    max-width: 975px; /* Para ocupar toda a largura disponível */
+    height: 100%;
+    height: 300px; /* Altura do gráfico */
+    margin-top: 20px; /* Espaço entre os cards e o gráfico */
+    margin-left: 10px;
+    border-radius: 3px;
 }
-
-.table-container {
-    width: 100%; 
-    overflow-x: auto; 
-} */
