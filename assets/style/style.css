@@ -1,0 +1,178 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333; /* Cor do texto */
+}
+
+h5 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Negrito para títulos */
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular para parágrafos */
+}
+
+
+body {
+  background-color: #f8f9fa; /* Cor de fundo */
+}
+
+/* Estilos do Navbar */
+.navbar {
+  background-color: #343a40; /* Cor de fundo da navbar */
+}
+
+.navbar-brand {
+  font-weight: bold; /* Negrito para a marca */
+}
+
+.nav-btn-entrar {
+  border-color: #ffffff; /* Cor da borda do botão */
+  color: #ffffff; /* Cor do texto do botão */
+}
+
+
+/* Estilos das Features */
+.feature-box {
+  background-color: #fff; /* Cor de fundo das features */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para as features */
+  min-height: 300px;
+}
+
+/* Estilos do Footer */
+footer {
+  background-color: #212529; /* Cor do footer */
+}
+
+footer h5 {
+  color: #ffffff; /* Cor amarela para os títulos */
+}
+
+/* Estilo dos textos e listas */
+footer p, footer ul {
+  color: #fff; /* Cor branca para os textos e listas */
+}
+
+footer ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+footer ul li {
+  margin-bottom: 10px; /* Espaçamento entre os itens da lista */
+}
+
+/* Estilo dos links */
+footer a {
+  color: #fff !important; /* Links brancos */
+  text-decoration: none !important; /* Remove sublinhado */
+}
+
+footer a:hover {
+  color: #fff !important; /* Mantém links brancos no hover */
+  text-decoration: none !important; /* Mantém sem sublinhado no hover */
+}
+
+footer img {
+  margin-top: 10px; /* Espaçamento entre Solar Wise e o logo */
+}
+
+/* Correções de layout e alinhamento das colunas */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  flex: 1;
+  padding: 0 15px;
+}
+
+.feature-box img {
+  width: 80px; /* Define a largura do ícone */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block;
+  margin: 0 auto; /* Centraliza o ícone */
+}
+.carousel-item img {
+  max-height: 550px; /* Ajuste este valor para controlar a altura máxima da imagem */
+  object-fit: cover; /* Isso garante que a imagem preencha o espaço sem distorção */
+}
+
+.navbar-logo {
+  max-width: 100px; /* Define a largura máxima para o logo da navbar */
+  height: auto;     /* Mantém a proporção original */
+}
+
+.footer-logo {
+  max-width: 80px; /* Define a largura máxima para o logo do rodapé */
+  height: auto;    /* Mantém a proporção original */
+}
+
+.feature-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+.carousel-caption {
+  position: absolute;
+  top: 0; /* Começa no topo da imagem */
+  left: 0; /* Alinha à esquerda */
+  width: 40%; /* Largura do fundo, ajuste conforme necessário */
+  height: 100%; /* Altura total da imagem */
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo preto transparente mais leve */
+  padding: 40px; /* Espaçamento interno */
+  display: flex; /* Usar flexbox para centralizar conteúdo */
+  flex-direction: column; /* Direção vertical */
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+}
+
+.caption-content h5, .caption-content p {
+  color: white; /* Cor do texto branco */
+  margin: 0; /* Remove margens do título e parágrafo */
+}
+
+
+
+
+.navbar-brand {
+  margin-left: 40px; /* Ajusta o espaçamento entre o logo e o texto */
+}
+
+.nav-btn-entrar {
+  margin-left: 80px; /* Ajusta o espaçamento do botão Entrar para a esquerda */
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px; /* Aumenta o espaçamento entre os itens */
+}
+
+.navbar-nav .nav-item:last-child {
+  margin-right: 0; /* Remove a margem do último item para evitar espaçamento extra à direita */
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .text-md-left {
+    text-align: left !important; /* Alinhamento à esquerda em telas maiores */
+  }
+  
+  .text-center {
+    text-align: center !important; /* Alinhamento central */
+  }
+}
