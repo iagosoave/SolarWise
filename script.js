@@ -1,3 +1,5 @@
+
+
 const averageValue = 52; // Valor da média
 
 // Função feita para organizar o conjunto de dados dos meses que seram formados no gráfico, de forma que se encontrar dados na tabelaDados adiciona para aquele mês,
@@ -278,3 +280,5 @@ window.onload = function () {
   gerarGrafico();
   atualizarGraficoDonut();
 };
+
+
