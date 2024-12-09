@@ -280,5 +280,3 @@ window.onload = function () {
   gerarGrafico();
   atualizarGraficoDonut();
 };
-
-

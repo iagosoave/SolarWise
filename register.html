@@ -1,47 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style/styleRegister.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <title>Login</title>
-</head>
-<body>
-    <div class="sidenav">
-        <div class="login-main-text">
-           <h2>Solar Wise<br> Área de cadastro</h2>
-           <p>Cadastre-se e desfrute de todos os serviços da Solar Wise</p>
-        </div>
-     </div>
-     <div class="main">
-        <div class="col-md-6 col-sm-12">
-           <div class="login-form">
-              <form>
-                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" class="form-control" placeholder="Email">
-                 </div>
-                 <div class="form-group">
-                    <label>Senha</label>
-                    <input type="password" class="form-control" placeholder="Senha">
-                 </div>
-                 <div class="form-group">
-                    <label>Confirme sua senha</label>
-                    <input type="password" class="form-control" placeholder="Confirme sua senha">
-                 </div>
-                 <div class="form-group">
-                    <label>Nome da empresa</label>
-                    <input type="text" class="form-control" placeholder="Nome da empresa">
-                 </div>
-                 <button type="submit" class="btn btn-black">Registrar</button>
-                 <a class="btn btn-secondary" href="login.html" target="_self">Fazer Login</a>
-              </form>
+    <title>Resgistrar</title>
+    <link rel="shortcut icon" href="assets/img/logo.svg" type="image/x-icon">
+   </head>
+   <body>
+       <div class="container-fluid">
+           <div class="row">
+               <!-- Lado esquerdo -->
+               <div class="col-md-6 left-section">
+                   <div class="illustration-container">
+                       <img src="assets/img/Environmental audit-cuate (1).png" alt="Ilustração">
+                   </div>
+               </div>
+   
+               <!-- Lado direito -->
+               <div class="col-md-6 right-section">
+                   <div class="form-container">
+                       <h2 class="welcome-title">Criar conta</h2>
+                       <p class="subtitle">Crie uma conta para acessar dashboard Solar Wise</p>
+                       <form id="registerForm">
+                           <div class="form-group">
+                               <label>Email:</label>
+                               <input type="email" class="form-control" id="email" placeholder="Email" required>
+                           </div>
+                           <div class="form-group">
+                               <label>Senha:</label>
+                               <input type="password" class="form-control" id="password" placeholder="Senha" required>
+                           </div>
+                           <div class="form-group">
+                               <label>Confirme sua senha:</label>
+                               <input type="password" class="form-control" id="confirmPassword" placeholder="Confirme sua senha" required>
+                           </div>
+                           <div class="form-group">
+                               <label>Nome da empresa:</label>
+                               <input type="text" class="form-control" id="companyName" placeholder="Nome da empresa" required>
+                           </div>
+                           <button type="submit" class="btn btn-secondary white" id="createAccountButton">Criar conta</button>
+                           <button type="button" class="btn btn-secondary" onclick="window.location.href='login.html';">Já tenho uma conta</button>
+                       </form>
+                   </div>
+               </div>
            </div>
-        </div>
-     </div>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-</body>
-</html>
+       </div>
+   
+       <!-- Alert no topo -->
+       <div class="alert alert-success alert-fixed" id="topAlert" role="alert">
+           Usuário criou a conta com sucesso!
+       </div>
+   
+       <script>
+           document.getElementById('registerForm').addEventListener('submit', function(event) {
+               event.preventDefault(); // Evita o comportamento padrão do formulário
+   
+               // Obter os valores dos campos do formulário
+               const email = document.getElementById('email').value;
+               const password = document.getElementById('password').value;
+               const confirmPassword = document.getElementById('confirmPassword').value;
+               const companyName = document.getElementById('companyName').value;
+   
+               // Verifica se todos os campos estão preenchidos
+               if (email && password && confirmPassword && companyName && password === confirmPassword) {
+                   const alertElement = document.getElementById('topAlert');
+                   alertElement.style.display = 'block';
+   
+                   // Oculta o alerta após 3 segundos
+                   setTimeout(() => {
+                       alertElement.style.display = 'none';
+                   }, 3000);
+               } else {
+                   // Se algum campo estiver vazio ou as senhas não coincidirem
+                   alert('Por favor, preencha todos os campos corretamente.');
+               }
+           });
+       </script>
+   </body>
+   </html>
